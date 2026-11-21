@@ -53,7 +53,7 @@
             <a href="carrito.html">Pedidos</a>
           </div>
           <a class="nav-contact"
-            href="https://wa.me/51947388968?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20repuestos.">Atención
+            href="https://wa.me/51947388968?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20los%20repuestos%20de%20DAJU%20RR.">Atención
             por WhatsApp ↗</a>
         </div>
       </nav>
@@ -313,7 +313,7 @@
             <p>Indícanos la marca, el modelo y el año de tu vehículo.</p>
             <a class="contact-phone" href="tel:+51947388968">+51 947 388 968</a>
             <a class="btn light"
-              href="https://wa.me/51947388968?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20repuestos.">Consultar
+              href="https://wa.me/51947388968?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20los%20repuestos%20de%20DAJU%20RR.">Consultar
               por WhatsApp ↗</a>
           </div>
 
@@ -340,7 +340,7 @@
               <h3 id="location-title">La Victoria · Av. México N.º 123</h3>
               <p>Consulta por WhatsApp antes de visitarnos.</p>
               <a class="text-button"
-                href="https://wa.me/51947388968?text=Hola%2C%20%C2%BFpodr%C3%ADan%20enviarme%20la%20direcci%C3%B3n%20exacta%20y%20el%20pin%20de%20ubicaci%C3%B3n%20de%20Comercial%20Daju%20RR%3F">Pedir
+                href="https://wa.me/51947388968?text=Hola%2C%20%C2%BFpodr%C3%ADan%20enviarme%20la%20direcci%C3%B3n%20exacta%20y%20el%20pin%20de%20ubicaci%C3%B3n%20de%20Comercial%20DAJU%20RR%3F">Pedir
                 ubicación ↗</a>
             </div>
           </aside>
@@ -379,7 +379,7 @@
       </div>
     </footer>
     <a class="whatsapp"
-      href="https://wa.me/51947388968?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20repuestos."
+      href="https://wa.me/51947388968?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20los%20repuestos%20de%20DAJU%20RR."
       target="_blank" rel="noopener noreferrer"
       aria-label="Consultar por WhatsApp al +51 947 388 968">
       <svg viewBox="0 0 32 32" aria-hidden="true">
@@ -605,7 +605,7 @@
         const t = totals();
         const name = $('#client-name')?.value.trim();
         const vehicle = $('#vehicle')?.value.trim();
-        return ['Hola, deseo consultar este pedido en Comercial Repuestos Daju RR:', name ? 'Nombre: ' + name : '', vehicle ? 'Vehículo: ' + vehicle : '', ...cart.map(([id, qty]) => `${qty} × ${byId(id).name} — ${money(byId(id).price)} c/u — Subtotal ${money(byId(id).price * qty)}`), 'Total referencial: ' + money(t.total), 'Ahorro respecto al precio anterior: ' + money(t.original - t.total), 'Por favor, confirmen compatibilidad, disponibilidad, precio final y costo de entrega.'].filter(Boolean).join('\n');
+        return ['Hola, deseo consultar este pedido en Comercial Repuestos DAJU RR:', name ? 'Nombre: ' + name : '', vehicle ? 'Vehículo: ' + vehicle : '', ...cart.map(([id, qty]) => `${qty} × ${byId(id).name} — ${money(byId(id).price)} c/u — Subtotal ${money(byId(id).price * qty)}`), 'Total referencial: ' + money(t.total), 'Ahorro respecto al precio anterior: ' + money(t.original - t.total), 'Por favor, confirmen compatibilidad, disponibilidad, precio final y costo de entrega.'].filter(Boolean).join('\n');
       }
 
       const dialog = $('#product-dialog');
@@ -615,7 +615,7 @@
         const p = byId(id);
         if (!p) return;
         dialogTrigger = trigger;
-        $('#dialog-content').innerHTML = `<div class="detail-grid"><img src="img/${p.id}.jpg" alt="${p.name}, imagen ilustrativa"><div class="detail-body"><p class="category">${p.category}</p><h2 id="dialog-title">${p.name}</h2><p>${p.description}</p><div class="price-line"><strong>${money(p.price)}</strong><del>${money(p.original)}</del></div><small>Ahorro: ${discount(p)} %. Precios e imágenes de referencia. Confirma compatibilidad, stock y vigencia.</small><button type="button" class="btn" data-add="${p.id}">Pedir</button><a class="text-button" target="_blank" rel="noopener noreferrer" href="${escapeHTML(waURL('Hola, deseo información sobre ' + p.name + '. ¿Pueden confirmar precio y compatibilidad con mi vehículo?'))}">Consultar por WhatsApp ↗</a></div></div>`;
+        $('#dialog-content').innerHTML = `<div class="detail-grid"><img src="img/${p.id}.jpg" alt="${p.name}, imagen ilustrativa"><div class="detail-body"><p class="category">${p.category}</p><h2 id="dialog-title">${p.name}</h2><p>${p.description}</p><div class="price-line"><strong>${money(p.price)}</strong><del>${money(p.original)}</del></div><small>Ahorro: ${discount(p)} %. Precios e imágenes de referencia. Confirma compatibilidad, stock y vigencia.</small><button type="button" class="btn" data-add="${p.id}">Pedir</button><a class="text-button" target="_blank" rel="noopener noreferrer" href="${escapeHTML(waURL('Hola, deseo información sobre ' + p.name + ' de DAJU RR. ¿Pueden confirmar precio y compatibilidad con mi vehículo?'))}">Consultar por WhatsApp ↗</a></div></div>`;
         dialog.showModal();
         document.body.classList.add('modal-open');
         $('.dialog-close').focus();
